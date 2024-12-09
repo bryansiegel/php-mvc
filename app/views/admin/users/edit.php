@@ -1,3 +1,5 @@
+<?php include('config/urls.php'); ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,7 +7,7 @@
 </head>
 <body>
     <h1>Edit User</h1>
-    <form method="POST" action="/edit/<?php echo $user['id']; ?>">
+    <form method="POST" action="<?php echo $baseDir; ?>/edit/<?php echo $user['id']; ?>">
         <label>Name: </label>
         <input type="text" name="name" value="<?php echo $user['name']; ?>" required>
         <br>

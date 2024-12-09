@@ -1,3 +1,6 @@
+
+<?php include('config/urls.php'); ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,7 +8,7 @@
 </head>
 <body>
     <h1>Create New User</h1>
-    <form method="POST" action="/create">
+    <form method="POST" action="<?php echo $baseDir; ?>/create">
         <label>Name: </label>
         <input type="text" name="name" required>
         <br>
