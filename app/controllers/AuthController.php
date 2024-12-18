@@ -31,10 +31,10 @@ class AuthController {
 
     public function dashboard() {
         session_start();
-        if (!isset($_SESSION['user_id'])) {
-            header('Location: /');
-            exit();
-        }
+        // if (!isset($_SESSION['user_id'])) {
+        //     header('Location: /');
+        //     exit();
+        // }
         require_once __DIR__ . '/../views/admin/dashboard.php';
     }
 

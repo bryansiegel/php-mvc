@@ -26,7 +26,7 @@ class UserController {
             $email = $_POST['email'];
             $password = $_POST['password'];
             $this->userModel->create($name, $email, $password);
-            header('Location: ' . $baseDir);
+            header('Location: ' . $baseDir . 'admin/dashboard');
         }
         require __DIR__ . '/../views/admin/users/create.php';
     }

@@ -21,8 +21,8 @@ class User {
     }
 
     public function create($name, $email) {
-        $stmt = $this->db->prepare("INSERT INTO users (name, email) VALUES (?, ?)");
-        return $stmt->execute([$name, $email]);
+        $stmt = $this->db->prepare("INSERT INTO users (name, email, password) VALUES (?, ?, ?)");
+        return $stmt->execute([$name, $email, $password]);
     }
 
     public function update($id, $name, $email) {

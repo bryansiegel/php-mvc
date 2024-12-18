@@ -31,7 +31,11 @@ elseif($requestUri === $baseDir . 'about/' || $requestUri === $baseDir . 'about'
 elseif($requestUri === $baseDir . 'login/' || $requestUri === $baseDir . 'login') {
 $auth->login();
 }
-
+//auth/dashboard
+elseif($requestUri === $baseDir . 'admin/dashboard/' || $requestUri === $baseDir . 'admin/dashboard') {
+    $auth->dashboard();
+    }
+    
 
 //users
 elseif ($requestUri === $baseDir . 'users/' || $requestUri === $baseDir . 'users') {

@@ -6,7 +6,7 @@
     <title>Dashboard</title>
 </head>
 <body>
-    <h2>Welcome, <?= htmlspecialchars($_SESSION['username']) ?>!</h2>
+    <h2>Welcome, <?php //htmlspecialchars($_SESSION['username']) ?>!</h2>
     <a href="/logout">Logout</a>
 </body>
 </html>
