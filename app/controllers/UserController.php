@@ -24,7 +24,8 @@ class UserController {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $name = $_POST['name'];
             $email = $_POST['email'];
-            $this->userModel->create($name, $email);
+            $password = $_POST['password'];
+            $this->userModel->create($name, $email, $password);
             header('Location: ' . $baseDir);
         }
         require __DIR__ . '/../views/admin/users/create.php';
@@ -48,5 +49,7 @@ class UserController {
         $this->userModel->delete($id);
         header('Location: ' . $baseDir);
     }
+
+    
 }
 ?>
